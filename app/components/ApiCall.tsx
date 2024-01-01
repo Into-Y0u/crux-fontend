@@ -3,27 +3,29 @@
 import React, { useEffect } from 'react'
 
 const ApiCall = () => {
-  const apiUrl = 'http://127.0.0.1:8000/public/login';
-  const apiKey = 'CRUX_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiX2xnUlV3dGFLMWpSbkdqcUFpU3ZlTGRoWXVkNzhhWFhQX2JmV1QxVF9qZyJ9.6gc4a0t9N1f5NqqLeD57JyDg3dgFJPVPmAGAXuOefZ8';
+  const apiUrl = 'https://test2-kyfh.onrender.com/auth/allusers';
+  const apiKey = 'CRUX_eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoialZRQW9RQXJhYTF1MnJKTmQzcXlXcGJYamk0ZC03OTdVenVndFlCSFRTQSJ9.KsM260E6yfj6IqZvQWzszjpfDfLx4MwuznJmTAP5KWI';
+  const bearerToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzdXBlcmFkbWluQHN1cGVybWFpbC5jb20iLCJleHAiOjE3MDQwMzM5NjV9.s9wERJyEsQJRKgGI4ijL_lzBVgP6mRu6jPY8naQj3iQ';
 
   const headers = {
     'Content-Type': 'application/json',
-    'api_key': apiKey // Assuming 'api_key' is the header name for the API key
+    'api_key': apiKey,  // Assuming 'api_key' is the header name for the API key,
+    'Authorization': `Bearer ${bearerToken}`
   };
 
-  const requestBody = {
-    email: 'boatclone@boatmail.com',
-    password: 'test123'
-    // Add other necessary fields for the request body
-  };
+  // const requestBody = {
+  //   email: 'boatclone@boatmail.com',
+  //   password: 'test123'
+  //   // Add other necessary fields for the request body
+  // };
 
 
   const handleAPICall = async () => {
     try {
         const apiResponse = await fetch(apiUrl, {
-          method: 'POST',
+          method: 'GET', // POST
           headers: headers,
-          body: JSON.stringify(requestBody)
+          // body: JSON.stringify(requestBody)
         });
     
         if (!apiResponse.ok) {

@@ -1,0 +1,114 @@
+.container {
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;   
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .left {
+    width: 40%;
+    padding: 30px;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+
+              /** TEXT GRADIENT */ color: #aba6b4; background-image: -webkit-linear-gradient(45deg, #aba6b4 33%, #cf5492 56%, #e8bff2 31%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
+  
+  }
+  .left h2 {
+    color: white;
+    font-size: 5rem;
+    font-weight: 800;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .left h3 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 400;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .left p {
+    color: white;
+    font-size: 2rem;
+    padding: 12px;
+    font-weight: 250;
+    margin: 0;
+    justify-self: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .left ul{
+    padding: 0;
+  }
+  .left button{
+    margin-top: 5vh;
+    width: 100px;
+    height: auto;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px;
+    font-family: 'Cinzel Decorative', cursive;
+  }
+  
+  .right{
+    width: 40%;
+    padding: 20px;
+  }
+  .img{
+    width: 100%;
+  }
+  
+  
+  .list{
+    display: flex;
+    list-style: none;
+    color: #ffffff;
+    
+  }
+  
+
+  
+  @media screen and (max-width:880px) {
+    .container {
+      flex-direction: column-reverse;
+      height: auto;
+      width: 90%;
+      padding: 10px;
+      margin: 10% 5%;
+    }
+    .left {
+      width: 100%;
+      margin: 0px;
+      padding: 10px;
+    }
+    .right {
+      width: 100%;
+      margin: 0px;
+      padding: 10px;
+    }
+    .left h1 {
+      margin-top: 0px;
+      font-size: 2rem;
+    }
+    .left p {
+  
+      font-size: 1rem;
+  
+      font-weight: 100;
+    }
+    .left button{
+      margin-top: 30px;
+      width: 150px;
+      height: 40px;
+    }
+  
+  }
